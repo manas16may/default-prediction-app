@@ -8,7 +8,7 @@ Created on Fri Jul 16 13:14:52 2021
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 import pickle
-d3=pd.read_csv('C:/Users/manas/Downloads/train.csv')
+d3=pd.read_csv('train.csv')
 #balance_orig and balance_obs are correlated
 #hpi_time and uer_time are highly negatively correlated
 l=["balance_time","LTV_time","interest_rate_time","rate_time","hpi_time","gdp_time","uer_time","FICO_orig_time","LTV_orig_time","Interest_Rate_orig_time","hpi_orig_time"]
@@ -21,7 +21,7 @@ X=d3[[ 'balance_time', 'LTV_time', 'interest_rate_time', 'rate_time','hpi_time',
 y=d3.iloc[:,-1]
 m1=LogisticRegression(max_iter=1000)
 m1.fit(X,y)
-d4=pd.read_csv('C:/Users/manas/Downloads/test.csv')
+d4=pd.read_csv('test.csv')
 X1=d4[[ 'balance_time', 'LTV_time', 'interest_rate_time', 'rate_time','hpi_time', 'gdp_time', 'uer_time', 'REtype_CO_orig_time','REtype_PU_orig_time', 'REtype_SF_orig_time', 'investor_orig_time', 'FICO_orig_time', 'LTV_orig_time','Interest_Rate_orig_time', 'hpi_orig_time']]
 y1=d4.iloc[:,-1]
 y=m1.predict(X1)
