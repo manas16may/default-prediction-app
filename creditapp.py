@@ -23,7 +23,7 @@ def predict_default(LTV_time,interest_rate_time,hpi_time,gdp_time,uer_time):
     prediction=clf.predict([[result1,result2,result3,hpi_time,gdp_time,result4]])
     return prediction
 def score_func(uer_time):
-    d3=pd.read_csv('C:/Users/manas/Downloads/train.csv')
+    d3=pd.read_csv('train.csv')
     d4=d3.copy()
     d4.drop(['balance_orig_time'],inplace=True,axis=1)
     l=["balance_time","LTV_time","interest_rate_time","rate_time","hpi_time","gdp_time","uer_time","FICO_orig_time","LTV_orig_time","Interest_Rate_orig_time","hpi_orig_time"]
