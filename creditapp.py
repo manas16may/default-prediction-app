@@ -77,7 +77,7 @@ def baseline(LTV_time,interest_rate_time,hpi_time,gdp_time,uer_time):
 def main():
     st.title("Credit risk")
     html_temp = """
-    <div style="background-color:apple;padding:10px">
+    <div style="background-color:orange;padding:10px">
     <h2 style="color:white;text-align:center;">Streamlit Credit Risk ML App </h2>
     </div>
     """
