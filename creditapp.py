@@ -81,6 +81,7 @@ def main():
     <h2 style="color:white;text-align:center;">Streamlit Credit Risk ML App </h2>
     </div>
     """
+    st.header('This app is created to predict if the customer will default after taking loan or not')
     st.markdown(html_temp,unsafe_allow_html=True)
     Ltv_time = st.text_input("Ltv_time","Type Here")
     interest_rate_time = st.text_input("interest_rate_time","Type Here")
