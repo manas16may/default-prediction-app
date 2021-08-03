@@ -60,7 +60,7 @@ from sklearn.model_selection import train_test_split
 #from google.colab import files
 #d3.to_csv('filedataset.csv') 
 #files.download('filedataset.csv')
-d3=pd.read_csv('C:/Users/LENOVO/Downloads/filedataset.csv')
+d3=pd.read_csv('filedataset.csv')
 l=["balance_time","LTV_time","interest_rate_time","rate_time","hpi_time","gdp_time","uer_time","FICO_orig_time","LTV_orig_time","Interest_Rate_orig_time","hpi_orig_time"]
 
 """##EDA"""
@@ -173,7 +173,6 @@ for i in p:
 
 useful
 
-"""### 'LTV_time', 'interest_rate_time', 'hpi_time', 'gdp_time', 'uer_time' are the significant features"""
 
 useful.extend(['score'])
 useful
@@ -208,7 +207,6 @@ finaltestdf=pd.DataFrame()
 for i in L:
   if i!='score':
     finaltestdf[i]=test_data_woe[i+'_woe']
-#L1=['score','gdp_time','hpi_time','status_time','uer_time']
 finaltestdf['score']=model.fit_predict(test_data)
 L1=['status_time']
 for i in L1:
