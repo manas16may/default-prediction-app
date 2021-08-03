@@ -26,7 +26,7 @@ def predict_default(LTV_time,rate_time,hpi_time,gdp_time,uer_time,hpi_orig_time)
     prediction=clf.predict([[result1,result2,result3,result4,result5,result6,result7]])
     return prediction
 def score_func(LTV_time,rate_time,hpi_time,gdp_time,uer_time,hpi_orig_time):
-    d3=pd.read_csv('C:/Users/LENOVO/Downloads/filedataset.csv')
+    d3=pd.read_csv('filedataset.csv')
     d4=d3.copy()
     l=["balance_time","LTV_time","interest_rate_time","rate_time","hpi_time","gdp_time","uer_time","FICO_orig_time","LTV_orig_time","Interest_Rate_orig_time","hpi_orig_time"]
     mean1=d4['LTV_time'].mean()
