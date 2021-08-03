@@ -13,7 +13,7 @@ from sklearn.ensemble import IsolationForest
 from PIL import Image
 import math 
 import numpy as np
-pickle_in=open("D:/creditriskapp/creditrisk.pkl","rb")
+pickle_in=open("creditrisk.pkl","rb")
 clf=pickle.load(pickle_in)
 def predict_default(LTV_time,rate_time,hpi_time,gdp_time,uer_time,hpi_orig_time):
     result1=feature(uer_time)
